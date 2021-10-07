@@ -28,12 +28,18 @@ const geocode =(address,callback) => {
 
 module.exports = geocode
 
+
+// IMPLEMENTATION 
+// Setting the api usage
 //geocoding
 
 //address ->lat/long -> weather
 
-// const url_geocode = 'https://api.mapbox.com/geocoding/v5/mapbox.places/varanasi.json?access_token=pk.eyJ1IjoicnA3NyIsImEiOiJja21rZXc4NXMxMGRhMnduYXhzZ3NwMzYxIn0.anlNbCiooA0_Lk5Qrxc4Jw&limit=1'
+// const url_geocode = 'https://api.mapbox.com/geocoding/v5/mapbox.places/varanasi.json?access_token=&limit=1'
 
+
+
+//
 // request({ url:url_geocode,json:true},(error, response)=>{
 //     if(error){
 //         console.log("Unable to connect to the geocoding service! Try Again?");
