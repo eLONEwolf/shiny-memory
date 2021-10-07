@@ -1,8 +1,16 @@
+
+// uses the coordinates to query the weather at the respective location.
+
+
+
+
 const request = require('request')
 
 
+
+
 const forecast = (latitude,longitude, callback) => {
-    const url = 'http://api.weatherapi.com/v1/current.json?key=58cf65c931a74c64aae141221212503&q='+ latitude + ',' + longitude;
+    const url = 'http://api.weatherapi.com/v1/current.json?key=<write access key here>&q='+ latitude + ',' + longitude;
 
     request({ url , json:true }, (error,{body}) => {
         if(error){
@@ -16,6 +24,14 @@ const forecast = (latitude,longitude, callback) => {
                             "Humidity - " + body.current.humidity + "\n" +
                             "Feels like " + body.current.feelslike_c;
             callback(undefined,getback);
+            
+            
+            
+            
+            
+            
+            
+            // for test
                 // localTime = response.body.location.LocalTime,
                 // weatherText = response.body.current.condition.text,
                 // icon = response.body.current.condition.icon,
@@ -29,8 +45,8 @@ module.exports = forecast;
 
 
 
-
-// const url = 'http://api.weatherapi.com/v1/current.json?key=58cf65c931a74c64aae141221212503&q=28.010952,73.314789'               
+// test the api by sending specific location.
+// const url = 'http://api.weatherapi.com/v1/current.json?key=&q=28.010952,73.314789'               
 
 // request({ url:url,json:true},(error, response)=>{
     
