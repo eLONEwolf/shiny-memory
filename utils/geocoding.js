@@ -1,7 +1,15 @@
-const request = require('request')
+
+
+// Take location input and get coordinates using the mapbox geocoding api.
+
+
+
+
+
+const request = require('request');
 
 const geocode =(address,callback) => {
-    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+ encodeURIComponent(address) +'.json?access_token=pk.eyJ1IjoicnA3NyIsImEiOiJja21rZXc4NXMxMGRhMnduYXhzZ3NwMzYxIn0.anlNbCiooA0_Lk5Qrxc4Jw&limit=1'
+    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+ encodeURIComponent(address) +'.json?access_token=<access token here>'
 
     request({url, json:true },(error,{body})=>{
         if(error){
